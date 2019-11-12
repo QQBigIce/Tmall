@@ -1,0 +1,7 @@
+div.app{
+    width: 50%;
+    min-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+

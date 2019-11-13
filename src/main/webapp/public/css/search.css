@@ -1,7 +1,7 @@
 div.searchMain{
     position: relative;
     width: 1000px;
-    margin: 0 auto;
+    margin: -100px auto 0 auto;
 }
 
 div.searchDiv{
@@ -47,7 +47,7 @@ div.searchBelow a{
 img.logo{
     position: relative;
     left: 0px;
-    top: 90px;
+    top: 125px;
     z-index: -1;
 }
 

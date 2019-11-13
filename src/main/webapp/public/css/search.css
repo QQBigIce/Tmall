@@ -1,4 +1,11 @@
+div.searchMain{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
 div.searchDiv{
+    position: relative;
     background-color: #C40000;
     width: 400px;
     margin: 50px auto;
@@ -38,15 +45,12 @@ div.searchBelow a{
 }
 
 img.logo{
-    position: absolute;
+    position: relative;
     left: 0px;
-    top: 30px;
+    top: 90px;
     z-index: -1;
 }
-body{
-    font-size: 12px;
-    font-family: Arial;
-}
+
 a{
     color: #999999;
 }

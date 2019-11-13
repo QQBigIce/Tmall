@@ -1,4 +1,4 @@
-div.footer{
+div.footer1Main{
     margin: 0;
     border-top: 1px solid #e7e7e7;
 }
@@ -10,9 +10,10 @@ div.footer_ensure{
 }
 
 div.footer_desc{
+    width: 1000px;
+    margin: 0 auto;
     border-top: 1px solid #e7e7e7;
     padding-top: 30px;
-    margin: 0 20px;
 }
 
 div.footer_desc div.descColumn{
@@ -32,16 +33,3 @@ div.footer_desc a{
     padding-top: 3px;
 }
 
-body{
-    font-size: 12px;
-    font-family: Arial;
-}
-
-a{
-    color: #999999;
-}
-
-a:hover{
-    text-decoration: none;
-    color: #C40000;
-}

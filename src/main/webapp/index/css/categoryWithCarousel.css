@@ -1,3 +1,11 @@
+img.catear{
+    position: absolute;
+    left: 260.5px;
+    top: 159.65px;
+    height: 15px;
+    display: none;
+}
+
 div.categoryWithCarousel{
     width: 100%;
     position: relative;
@@ -15,8 +23,11 @@ div.categoryWithCarousel div.head{
     font-size: 16px;
     font-weight: bold;
     color: white;
-    margin-left: 20px;
+    margin-left: 247px;
     display: inline-block;
+}
+div.categoryWithCarousel div.head span{
+    margin-left: 10px;
 }
 
 div.categoryWithCarousel div.rightMenu{
@@ -37,6 +48,70 @@ div.categoryWithCarousel div.rightMenu img{
     height: 30px;
 }
 
+div.categoryMenu{
+    width: 200px;
+    background-color: #e2e2e3;
+    margin-left: 20px;
+    position: absolute;
+    left: 227px;
+    top: 0;
+    z-index: 1;
+}
+
+div.categoryMenu a{
+    color: #000000;
+}
+
+div.categoryMenu a:hover{
+    text-decoration: none;
+    color: lightskyblue;
+}
+
+div.productsAsideCategorys{
+    width: 800px;
+    height: 510px;
+    background-color: white;
+    margin-left: 220px;
+    position: absolute;
+    left: 227px;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+
+div.productsAsideCategorys div.row{
+    margin: 20px 80px 0 80px;
+}
+
+div.productsAsideCategorys div.row div.seperator{
+    margin-top: 20px;
+    border-bottom: 1px dashed #e7e7e7;
+}
+
+div.productsAsideCategorys a{
+    color: #999999;
+    font-size: 14px;
+    margin: 8px;
+}
+div.productsAsideCategorys a:hover{
+    text-decoration: none;
+    color: #C40000;
+}
+
+div.eachCategory{
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+div.eachCategory span{
+    margin-right: 10px;
+}
+
+div.eachCategory:hover{
+    background-color: white;
+}
+
 div.carousel-of-product{
     height: 510px;
     width: 1024px;
@@ -54,4 +129,73 @@ div.carouselBackgroundDiv{
     position: absolute;
     top: 36px;
     z-index: -1;
+}
+
+div.homepageCategoryProducts{
+    background-color: #f5f5f5;
+    padding: 50px 10px;
+    margin: 10px auto;
+    max-width: 1013px;
+}
+
+div.productItem{
+    width: 189px;
+    height: 285px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 8px 4px;
+    float: left;
+    cursor: pointer;
+}
+
+div.productItem span.productItemDesc{
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    padding: 16px;
+}
+
+div.productItem span.productPrice{
+    font-size: 16px;
+    color: #FF003A;
+    display: block;
+    padding-left: 16px;
+    margin-top: -10px;
+}
+
+div.productItem img{
+    width: 187px;
+    height: 190px;
+}
+div.productItem img:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+a.productItemDescLink{
+    display: inline-block;
+    height: 66px;
+    text-decoration: none;
+}
+span.categoryTitle{
+    font-size: 16px;
+    margin-left: 30px;
+    color: #646464;
+    font-weight: bold;
+}
+div.left-mark{
+    display: inline-block;
+    height: 20px;
+    vertical-align: top;
+    width: 5px;
+    background-color: #19c8a9;
+}
+
+img.endpng{
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+
+.eachHomepageCategoryProducts{
+    min-width: 1000px;
 }

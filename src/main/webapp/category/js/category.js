@@ -1,47 +1,38 @@
-
-function showProductsAsideCategorys(cid){
-    $("div.eachCategory[cid = "+cid+"]").css("background-color", "white");
-    $("div.eachCategory[cid = "+cid+"] a").css("color", "#87cefa");
-    $("div.productsAsideCategorys[cid = "+cid+"]").show();
-}
-
-function hideProductsAsideCategorys(cid){
-    $("div.eachCategory[cid = "+cid+"]").css("background-color", "#e2e2e3");
-    $("div.eachCategory[cid = "+cid+"] a").css("color", "#000");
-    $("div.productsAsideCategorys[cid = "+cid+"]").hide();
-}
-
 $(function () {
-   $("div.eachCategory").mouseenter(function () {
-       var cid = $(this).attr("cid");
-       showProductsAsideCategorys(cid);
-   });
-   $("div.eachCategory").mouseleave(function () {
-       var cid = $(this).attr("cid");
-       hideProductsAsideCategorys(cid);
-   });
-   $("div.productsAsideCategorys").mouseenter(function () {
-       var cid = $(this).attr("cid");
-       showProductsAsideCategorys(cid)
-   });
-   $("div.productsAsideCategorys").mouseleave(function () {
-       var cid = $(this).attr("cid");
-       hideProductsAsideCategorys(cid);
-   })
-});
+    $("input.sortBarPrice").keyup(function () {
+        //获取第一个匹配元素的字符串
+        var num = $(this).val();
+        //如果字符串长度为0，则显示所有物品，return
+        if (num.length == 0) {
+            $("div.productUnit").show();
+            return;
+        }
 
+        //否则将字符串转化为数字
+        num = parseInt(num);
+        //如果数字不为正数或者数字不存在，则num赋值为1
+        if (isNaN(num) || (num <= 0))
+            num = 1;
+        //将num设置到获取字符串的所有匹配元素
+        $(this).val(num);
 
-$(function () {
-    $("div.rightMenu span").mouseenter(function () {
-        var left = $(this).position().left;
-        var top = $(this).position().top;
-        var width = $(this).css("width");
-        var destLeft = parseInt(left) + parseInt(width) / 2;
-        $("img#catear").css("left", destLeft);
-        $("img#catear").css("top", top-20);
-        $("img#catear").fadeIn(500);
-    });
-    $("div.rightMenu span").mouseleave(function () {
-        $("img#catear").hide();
+        //获取第一个输入框的值
+        var begin = $("input.beginPrice").val();
+        //第二个值
+        var end = $("input.endPrice").val();
+        //如果有一个不为空则商品先隐藏
+        if (!isNaN(begin) && !isNaN(end)) {
+            $("div.productUnit").hide();
+            //遍历每个商品单元
+            $("div.productUnit").each(function () {
+                // 获取price属性的值
+                var price = $(this).attr("price");
+                // 转化为数字
+                price = new Number(price);
+                // 显示begin——end区间的Unit
+                if (price <= end && price >= begin)
+                    $(this).show();
+            });
+        }
     });
 });
